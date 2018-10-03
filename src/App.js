@@ -19,7 +19,7 @@ class App extends Component {
     e.preventDefault()
     this.setState(prevState => {
       return {
-        expenses: prevState.expenses.concat([{cost: this.state.costInCents}]),
+        expenses: prevState.expenses.concat({cost: this.state.costInCents}),
         costInCents: 0
       }
     })

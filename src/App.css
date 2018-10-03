@@ -1,3 +1,52 @@
+html {
+  background-color: #333;
+}
+
 .App {
   text-align: center;
+}
+
+.title {
+  color: #ddd;
+  font-size: 3em;
+}
+
+.cost-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.cost-input {
+  font-size: 2em;
+  max-width: 300px;
+  text-align: center;
+}
+
+.submit-button {
+  padding: 1em;
+  margin-top: 2em;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 1em;
+}
+
+.expenses-title {
+  color: #ddd;
+}
+
+.expenses {
+  border: 2px solid #ddd;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  color: #ddd;
 }

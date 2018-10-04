@@ -4,7 +4,7 @@ import './App.css';
 class App extends Component {
   state = {
     costInCents: 0,
-    expenses: [{cost: 210}]
+    expenses: []
   }
 
   handlePriceChange(e) {
@@ -23,6 +23,10 @@ class App extends Component {
         costInCents: 0
       }
     })
+  }
+
+  removeAllExpenses(e) {
+    this.setState({expenses: []})
   }
 
   render() {
@@ -49,8 +53,14 @@ class App extends Component {
         </form>
         <h2 className="expenses-title">Recent Expenses</h2>
         <div className="expenses">
+        <button onClick={(e) => this.removeAllExpenses()}>Clear All</button>
           {this.state.expenses.map(expense => {
-            return <div className="expense">${(expense.cost / 100).toFixed(2).toString()}</div>
+            return (
+              <div className="expense">
+                ${(expense.cost / 100).toFixed(2).toString()}
+                <button onClick={(e) => {}}>x</button>
+              </div>
+            )
           })}
         </div>
       </div>
